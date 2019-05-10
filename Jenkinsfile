@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             agent {
-                label 'Octopus'
+                label 'master'
             }
             steps { 
                 powershell 'ipconfig'
@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             agent {
-                label 'Octopus_35'
+                label 'master'
             }
             steps {
                 powershell 'hostname'
