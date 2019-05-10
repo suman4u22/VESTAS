@@ -8,7 +8,6 @@ pipeline {
             steps {
                 powershell 'ipconfig'
             }
-        }
         stage('Deploy') {
             agent {
                 label "Octopus_35"
