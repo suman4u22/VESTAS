@@ -1,13 +1,20 @@
-pipeline {
-    agent none
+pipeline { 
+    agent any 
     stages {
-        stage('Build') {
-            agent {
-                label "Octopus"
-			}
-		}
-	}
-			steps {
-                echo 'Hello World'
-			}
+        stage('Build') { 
+            steps { 
+                sh 'make' 
+            }
+        }
+        stage('Test'){
+            steps {
+                sh 'make check'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'make publish'
+            }
+        }
+    }
 }
