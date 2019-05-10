@@ -1,9 +1,13 @@
 pipeline {
-	stages ('Build')
-		agent {
-			label "Node_35"
+    agent none
+    stages {
+        stage('Build') {
+            agent {
+                label "Octopus"
+			}
 		}
-	steps {
-		powershell 'ipconfig'
 	}
+			steps {
+                echo 'Hello World'
+			}
 }
