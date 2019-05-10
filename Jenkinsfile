@@ -3,7 +3,7 @@ pipeline {
 		agent {
 			label "Node_35"
 		}
-				steps {
-					powershell 'ípconfig'
-				}
+	steps {
+		powershell 'ipconfig'
+	}
 }
