@@ -7,3 +7,5 @@ pipeline {
 					powershell 'ípconfig'
 				}
 }
+
+	       
