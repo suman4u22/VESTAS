@@ -1,7 +1,7 @@
 pipeline { 
     agent any 
     stages {
-        stage('Build') {
+        stage('Clone a VM') {
             agent {
                 label 'master'
             }
@@ -9,7 +9,7 @@ pipeline {
                 powershell 'ipconfig'
             }
         }
-        stage('Test'){
+        stage('VOB Install'){
             agent {
                 label 'master'
             }
