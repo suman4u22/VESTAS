@@ -1,12 +1,12 @@
 pipeline { 
     agent any 
     stages {
-        stage('Build') { 
+        stage('VM Clone') { 
             steps { 
                 powershell 'ipconfig'
             }
         }
-        stage('Test'){
+        stage('VOB Install'){
             steps {
                 powershell 'hostname'
             }
