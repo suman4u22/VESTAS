@@ -1,18 +1,12 @@
 pipeline { 
     agent any 
     stages {
-        stage('Build') {
-            agent {
-                label 'master'
-            }
+        stage('Build') { 
             steps { 
                 powershell 'ipconfig'
             }
         }
         stage('Test'){
-            agent {
-                label 'master'
-            }
             steps {
                 powershell 'hostname'
             }
