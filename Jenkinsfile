@@ -8,29 +8,6 @@ pipeline {
             steps {
                 powershell 'ipconfig'
             }
-        stage('Deploy') {
-            agent {
-                label "Octopus_35"
-            }
-            steps {
-                powershell 'ping localhost'
-            }
-        }
-        stage('Test') { 
-            agent {
-                label "Octopus"
-            }
-            steps {
-                powershell 'nslookup localhost'
-            }
-        }
-        stage('Release') {
-            agent {
-                label "master"
-            }
-            steps {
-                powershell 'nslookup localhost'
-            }
         }
     }
 }
