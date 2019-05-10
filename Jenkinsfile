@@ -1,26 +1,34 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
-            agent {Node_35}
+        stage('Build')
+            agent {
+                label "Node_35"
+            }
             steps {
                 powershell 'ipconfig'
             }
         }
         stage('Deploy') {
-            agent {Octopus_35}
+            agent {
+                label "Octopus_35"
+            }
             steps {
                 powershell 'ping localhost'
             }
         }
         stage('Test') { 
-            agent {Octopus}
+            agent {
+                label "Octopus"
+            }
             steps {
                 powershell 'nslookup localhost'
             }
         }
         stage('Release') {
-            agent {master}
+            agent {
+                label "master"
+            }
             steps {
                 powershell 'nslookup localhost'
             }
