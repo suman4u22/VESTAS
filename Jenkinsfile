@@ -7,6 +7,7 @@ pipeline {
             }
             steps { 
                 powershell 'ipconfig'
+                powershell 'nslookup'
             }
         }
         stage('VOB Install') {
@@ -15,6 +16,7 @@ pipeline {
             }
             steps {
                 powershell 'hostname'
+                powershell 'getmac'
             }
         }
     }
