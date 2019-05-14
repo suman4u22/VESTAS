@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('VM Deploy') { 
             agent { 
-                label "master"
+                label "Octopus"
             }
             steps { 
                 powershell 'ipconfig'
@@ -11,7 +11,7 @@ pipeline {
         }
         stage('VOB Deploy') {
             agent { 
-                label "master"
+                label "Octopus"
             }
             steps {
                 powershell 'hostname'
