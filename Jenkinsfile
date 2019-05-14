@@ -10,7 +10,7 @@ pipeline {
                 powershell 'nslookup'
             }
         }
-        stage('VOB Install') {
+        stage('Octopus Deploy') {
             agent { 
                 label "master"
             }
