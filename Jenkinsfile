@@ -26,6 +26,7 @@ pipeline {
             steps {
                 powershell 'dir'
                 powershell 'mkdir suman'
+                powershell 'dir'
             }
         }
     }
