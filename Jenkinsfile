@@ -17,6 +17,7 @@ pipeline {
             steps {
                 powershell 'hostname'
                 powershell 'getmac'
+        }
         stage('ALL_UFT Automation Run') {
             agent { 
                 label "Agent_Win10"
