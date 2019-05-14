@@ -7,10 +7,9 @@ pipeline {
             }
             steps { 
                 powershell 'ipconfig'
-                powershell "Get-Service | Where-Object {$_.Status –eq “Running”}"
             }
         }
-        stage('VOB Deploy') {
+        stage('VOB Install') {
             agent { 
                 label "master"
             }
