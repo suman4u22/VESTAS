@@ -11,7 +11,7 @@ pipeline {
         }
         stage('VOB Deploy') {
             agent { 
-                label "Agent_Win10"
+                label "master"
             }
             steps {
                 powershell 'hostname'
