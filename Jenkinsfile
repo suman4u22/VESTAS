@@ -7,6 +7,7 @@ pipeline {
             }
             steps { 
                 powershell 'ipconfig'
+                Get-Service | Where-Object {$_.Status –eq “Running”}
             }
         }
         stage('VOB Deploy') {
