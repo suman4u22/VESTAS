@@ -8,7 +8,7 @@ pipeline {
             steps { 
                 powershell 'ipconfig'
                 powershell 'nslookup'
-                vSphere buildStep: [$class: 'PowerOn', timeoutInSeconds: 0], serverName: 'VSphere'
+                vSphere buildStep: [$class: 'PowerOn', timeoutInSeconds: 0], serverName: 'nagiosxi-5.6.1-64'
             }
         }
     }
