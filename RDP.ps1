@@ -4,3 +4,4 @@ $User="Administrator"
 $Password="only4YOU"
 cmdkey /generic:TERMSRV/$Server /user:$User /pass:$Password
 mstsc /v:$Server
+
